@@ -11,4 +11,13 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
+  # get "skis", to:"skis#index"
+
+  # get "skis/:id", to:"skis#show"
+
+  # get "skis/new", to:"skis#new"
+  # post "skis", to:"skis#create"
+
+resources :skis, only[:index, :show]
+
 end
