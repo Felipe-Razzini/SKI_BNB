@@ -13,6 +13,9 @@
 
   </head>
   <body>
+
+     <%= render 'shared/navbar' %>
+
     <%# <nav> %>
       <%# <ul> %>
         <%#if user_signed_in? %>
@@ -23,8 +26,9 @@
         <%#end %>
       <%# </ul> %>
     <%# </nav> %>
-    <%= render "shared/navbar" %>
+
     <%= render "shared/flashes" %>
+
     <%= yield %>
   </body>
 </html>
