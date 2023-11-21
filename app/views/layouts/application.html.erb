@@ -10,25 +10,13 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300&family=Poppins:wght@100;300&display=swap" rel="stylesheet">
-
   </head>
   <body>
-
-     <%= render 'shared/navbar' %>
-
-    <%# <nav> %>
-      <%# <ul> %>
-        <%#if user_signed_in? %>
-          <%# <li>= link_to "signout" , destroy_user_session_path,data:{turbo_method: :delete}</li> %>
-        <%#else %>
-        <%# <li>= link_to "login" , new_user_session_path</li> %>
-        <%# <li>= link_to "signup" , new_user_registration_path</li> %>
-        <%#end %>
-      <%# </ul> %>
-    <%# </nav> %>
+    <%= render 'shared/navbar' %>
+    <%= render 'shared/carsousel' %>
+    <%= render "shared/flashes" %>
     <%= render 'shared/footer' %>
     <%= render "shared/flashes" %>
-
     <%= yield %>
   </body>
 </html>
