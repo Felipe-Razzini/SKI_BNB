@@ -30,11 +30,12 @@
 .product-bar {
   background-color: black;
   border-radius: 10px;
-  padding-left: 10px;
-  padding-right: 10px;
+  padding: 10px;
 
   a{
     color: white;
+    text-decoration: none;
+    padding: 5px;
   }
 
   a:hover {
