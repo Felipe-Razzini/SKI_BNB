@@ -1,3 +1,21 @@
-<h1>Here is the Ski</h1>
+  <header>
+    <h1><%= @ski.brand %> Ski Details</h1>
+  </header>
 
-<p>Skis are better than snowboards</p>
+  <main>
+    <img src="https://images.unsplash.com/photo-1565992441121-4367c2967103?q=80&w=2023&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="<%= @ski.brand %> Ski Image">
+
+    <h2><%= @ski.brand %> skis are better than snowboards</h2>
+
+      <div class="details">
+      <p><strong>Brand:</strong> <%= @ski.brand %></p>
+      <p><strong>Experience Level:</strong> <%= @ski.experience_level %></p>
+      <p><strong>Size:</strong> <%= @ski.size %> cm</p>
+      <p><strong>Daily Price:</strong> $<%= @ski.daily_price %></p>
+      <p><strong>Location:</strong> <%= @ski.location %></p>
+
+    <p><%= @ski.brand %> is known for their history in the ski world, having been used in every Olympics bar the first one in 29 AD.</p>
+
+    <!-- Add more content and styles as needed -->
+
+  </main>

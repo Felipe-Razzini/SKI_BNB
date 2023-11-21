@@ -4,6 +4,6 @@ class SkisController < ApplicationController
   end
 
   def show
-    @ski = Ski.find
+    @ski = Ski.find(params[:id])
   end
 end

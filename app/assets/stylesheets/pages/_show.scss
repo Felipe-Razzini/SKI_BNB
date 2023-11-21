@@ -1,0 +1,28 @@
+@import "home";
+  body {
+    background-color: #fff;
+    color: #000;
+    margin: 0;
+    padding: 0;
+  }
+
+  header {
+    background-color: #fff;
+    color: #000;
+    padding: 10px;
+    text-align: center;
+  }
+
+  h1, h2, p {
+    color: #000;
+  }
+
+  img {
+    max-width: 30%;
+    height: auto;
+    float: left;
+    margin: 20px 10px 20px 10px;  /* Adjust the margin values as needed */
+    border: 2px solid #fff;  /* Add a 2px solid white border */
+    padding: 5px;  /* Add 5px of padding inside the border */
+    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+  }
