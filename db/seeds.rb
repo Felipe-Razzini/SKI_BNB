@@ -7,3 +7,14 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+create_table "skis", force: :cascade do |t|
+  t.string "brand"
+  t.string "experience_level"
+  t.integer "size"
+  t.integer "daily_price"
+  t.integer "user_id"
+  t.datetime "created_at", null: false
+  t.datetime "updated_at", null: false
+  t.string "location"
+
+
