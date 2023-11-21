@@ -1,8 +1,6 @@
 class SkisController < ApplicationController
 
   def index
-  end
-
-  def show
+    @skis = Ski.all
   end
 end
