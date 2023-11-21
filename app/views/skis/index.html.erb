@@ -1,18 +1,24 @@
-<h2>Over 1,000 skis</h1>
-<% @skis.each do |ski| %>
-<div class="row">
-  <div class="col-sm-4">
-    <div class="card bg-light text-dark" style="width: 18rem;">
-      <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5_01BcxNccbOeI0TTkO2jEueYlSqLXIn6w&usqp=CAU" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title"><%= ski.brand %></h5>
-        <p class="card-text"><%= ski.location %></p>
-        <p class="card-text"><%= ski.size %></p>
-        <p class="card-text"><%= ski.experience_level %></p>
-        <p class="card-text"><%= ski.daily_price %></p>
-        <a href="#" class="btn btn-dark">Go somewhere</a>
+<div class="container my-4">
+  <h2>Over 1,000 skis</h1>
+  <div class="row">
+  <% @skis.each do |ski| %>
+    <div class="col-4">
+      <div class="card bg-light text-dark ski-card">
+        <%# <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5_01BcxNccbOeI0TTkO2jEueYlSqLXIn6w&usqp=CAU" alt="Card image cap"> %>
+        <div class="card-image"
+        style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5_01BcxNccbOeI0TTkO2jEueYlSqLXIn6w&usqp=CAU')">
+
+        </div>
+        <div class="card-body">
+          <h5 class="card-title"><strong><%= ski.brand %></strong></h5>
+          <p class="card-text"><%= ski.location %></p>
+          <p class="card-text"><%= ski.size %> cm</p>
+          <p class="card-text"><%= ski.experience_level %></p>
+          <p class="card-text"><%= ski.daily_price %> €</p>
+          <a href="#" class="btn btn-dark">Book this ski</a>
+        </div>
       </div>
-  </div>
+    </div>
+  <% end %>
   </div>
 </div>
-<% end %>
