@@ -30,6 +30,9 @@
      <ul class="navbar-nav me-auto">
      <% if user_signed_in? %>
         <li class="nav-item active">
+          <a href="#"><%= link_to "Home", root_path %></a>
+        </li>
+        <li class="nav-item active">
           <a class="nav-link" href="#">Advertise your gear</a>
         </li>
         <li class="nav-item">

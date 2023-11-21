@@ -4,6 +4,10 @@
   border-bottom: 1px solid rgba(128, 128, 128, 0.195);
   align-items: center;
   box-shadow: 0px 0px 1px 0px gray;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  background-color: rgb(240, 240, 240);
 }
 
 .navbar-brand {
@@ -25,6 +29,15 @@
 
 .navbar-nav {
   align-items: center;
+
+  a {
+    align-items: center;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.8);
+    padding-right: 10px;
+
+  }
+
 }
 
 .product-bar {
