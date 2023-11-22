@@ -1,4 +1,5 @@
 class SkisController < ApplicationController
+  skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @skis = Ski.all
   end
@@ -6,7 +7,7 @@ class SkisController < ApplicationController
   def show
     @ski = Ski.find(params[:id])
   end
-  
+
   def new
     @ski = Ski.new
   end
