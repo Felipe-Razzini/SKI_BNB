@@ -19,12 +19,13 @@ class SkisController < ApplicationController
       redirect_to skis_path
       # redirect_to ski_path(@ski)
     else
-      render:new, status: :unprocessable_entity
+      render :new, status: :unprocessable_entity
     end
   end
 
   private
+
   def ski_params
-    params.require(:ski).permit(:brand,:experience_level,:size,:daily_price,:location)
+    params.require(:ski).permit(:brand, :experience_level, :size, :daily_price, :location)
   end
 end

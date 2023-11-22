@@ -1,6 +1,6 @@
 <nav class="navbar navbar-expand-sm navbar-light">
 
-  <a class="navbar-brand" href="#">
+  <a class="navbar-brand" href="<%= root_path %>">
     <i class="fa-solid fa-person-skiing"></i>
     <p>Skibnb</p>
   </a>
@@ -30,10 +30,7 @@
      <ul class="navbar-nav me-auto">
      <% if user_signed_in? %>
         <li class="nav-item active">
-          <a href="#"><%= link_to "Home", root_path %></a>
-        </li>
-        <li class="nav-item active">
-          <a class="nav-link" href="#">Advertise your gear</a>
+          <%= link_to "Advertise your gear", new_ski_path, class: "nav-link" %>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
@@ -50,10 +47,7 @@
         </li>
         <% else %>
           <li class="nav-item active">
-            <a href="#"><%= link_to "Home", root_path %></a>
-          </li>
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Advertise your gear</a>
+            <a class="nav-link" href="#"><%= link_to "Advertise your gear", new_ski_path %></a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">
