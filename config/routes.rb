@@ -18,6 +18,6 @@ Rails.application.routes.draw do
   # get "skis/new", to:"skis#new"
   # post "skis", to:"skis#create"
 
-  resources :skis, only: [:index, :show]
+  resources :skis, only: [:index, :show, :new,:create]
 
 end
