@@ -15,8 +15,8 @@
           <p class="card-text"><%= ski.size %> cm</p>
           <p class="card-text"><%= ski.experience_level %></p>
           <p class="card-text"><%= ski.daily_price %> €</p>
-          <a href="#" class="btn btn-dark">Book this ski</a>
         </div>
+        <%= link_to "Check availability", ski_path(ski.id), class: "book-button form-control" %>
       </div>
     </div>
   <% end %>

@@ -3,6 +3,10 @@ class SkisController < ApplicationController
     @skis = Ski.all
   end
 
+  def show
+    @ski = Ski.find(params[:id])
+  end
+  
   def new
     @ski = Ski.new
   end
@@ -21,6 +25,5 @@ class SkisController < ApplicationController
   private
   def ski_params
     params.require(:ski).permit(:brand,:experience_level,:size,:daily_price,:location)
-
   end
 end

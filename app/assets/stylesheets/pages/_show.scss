@@ -1,26 +1,41 @@
 
-  body {
-    background-color: #fff;
-    color: #000;
+.card-product-infos {
+  padding-top: 25px;
+
+  h4 {
+    font-weight: bold;
+    font-size: larger;
+    text-transform: uppercase;
+    padding-bottom: 10px;
+  }
+}
+
+
+.info-div {
+  border-top: 1px solid rgba(128, 128, 128, 0.345);
+  padding: 25px 10px 25px 10px;
+
+  p {
     margin: 0;
-    padding: 0;
   }
+}
 
-  header {
-    background-color: #fff;
-    color: #000;
-    padding: 10px;
-    text-align: center;
+.ski-offer {
+  display: flex;
+  margin: 20px;
+  background-color: white;
+
+  .ski-image {
+    background-size: cover;
+    margin-top: 50px;
+    margin-bottom: 50px;
   }
+}
 
- 
+.star-div {
+  align-items: center;
 
-  .main_img {
-    max-width: 30%;
-    height: auto;
-    float: left;
-    margin: 20px 10px 20px 10px;  /* Adjust the margin values as needed */
-    border: 2px solid #fff;  /* Add a 2px solid white border */
-    padding: 5px;  /* Add 5px of padding inside the border */
-    box-sizing: border-box;  /* Include padding and border in the element's total width and height */
+  .div-button {
+    padding-left: 25px;
   }
+}
