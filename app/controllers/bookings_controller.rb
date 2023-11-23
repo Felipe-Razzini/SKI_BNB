@@ -1,7 +1,12 @@
 class BookingsController < ApplicationController
+
+  def index
+    @bookings = Booking.where(user_id: current_user.id)
+  end
+
   def new
     @ski = Ski.find(params[:ski_id])
-    @booking = Bookking.new
+    @booking = Booking.new
   end
 
   def create
