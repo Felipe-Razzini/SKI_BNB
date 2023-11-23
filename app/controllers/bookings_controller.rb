@@ -1,7 +1,7 @@
 class BookingsController < ApplicationController
   def new
     @ski = Ski.find(params[:ski_id])
-    @booking = Bookking.new
+    @booking = Booking.new
   end
 
   def create
