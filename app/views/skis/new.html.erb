@@ -5,13 +5,14 @@
       </div>
       <div class="new-ski col-6">
         <%= simple_form_for @ski do |f| %>
-          <%= f.input :brand , :collection => %w[Atomic Rossignol Lacroix Salomon Fischer Crows Others] %>
+          <%= f.input :brand , :collection => %w[Atomic Rossignol Lacroix Salomon Fischer Crows] %>
           <%= f.input :experience_level, :collection =>%w[Beginner Intermediate Advanced] %>
           <%= f.input :size,as: :numeric %>
           <%= f.input :daily_price%>
           <%= f.input :location %>
+          <%= f.input :photo, as: :file %>
           <div class="row center-btn">
-            <%= f.submit "Submit", class: "btn btn-primary" %>
+            <%= f.submit "Submit", class: "btn btn-primary new-btn" %>
           </div>
         <% end %>
       </div>

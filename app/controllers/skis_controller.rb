@@ -1,12 +1,14 @@
 class SkisController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
-    @skis = Ski.all
-    @markers = @skis.geocoded.map do |ski|
-      {
-        lat: ski.latitude,
-        lng: ski.longitude
-      }
+    # @skis = Ski.all
+
+    # @ski = Ski.all
+    if params[:query].present?
+      sql_subquery = "brand ILIKE :query OR experience_level ILIKE :query"
+      @skis = Ski.where(sql_subquery, query: "%#{params[:query]}%")
+    else
+      @skis = Ski.all
     end
   end
 
@@ -32,6 +34,6 @@ class SkisController < ApplicationController
   private
 
   def ski_params
-    params.require(:ski).permit(:brand, :experience_level, :size, :daily_price, :location)
+    params.require(:ski).permit(:brand, :experience_level, :size, :daily_price, :location, :photo)
   end
 end

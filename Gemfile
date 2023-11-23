@@ -28,7 +28,10 @@ gem "stimulus-rails"
 
 gem "geocoder"
 gem "devise"
-gem "dotenv-rails"
+gem "dotenv-rails",groups: [:development, :test]
+gem "cloudinary"
+
+gem "pg_search"
 
 gem "geocoder"
 

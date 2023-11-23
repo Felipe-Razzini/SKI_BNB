@@ -1,4 +1,5 @@
 .new-form {
+ 
   background-size: cover;
   background-image: linear-gradient(
       to top,
@@ -22,4 +23,10 @@
 
 .form-label {
   font-weight: bolder;
+}
+
+.new-btn{
+  border-radius: 10px;
+  background-color: black;
+  border-color: black;
 }

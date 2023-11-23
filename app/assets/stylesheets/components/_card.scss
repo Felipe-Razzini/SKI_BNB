@@ -2,6 +2,8 @@
 .ski-card {
   margin: 10px;
   margin-top: 15px;
+  border: none;
+  box-shadow: 1px 2px 7px #00000096;
 
   a{
     text-decoration: none;
@@ -10,6 +12,14 @@
     padding: 8px 15px 8px 15px;
     text-align: center;
   }
+
+  width: 394px;
+  // height: 545px;
+  transition: width 1s;
+}
+
+.ski-card:hover{
+  width: 400px;
 }
 
 .card-image {
