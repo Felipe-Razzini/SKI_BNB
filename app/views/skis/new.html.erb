@@ -1,0 +1,20 @@
+<div class="new-form">
+  <div class="container">
+    <div class="row pt-5">
+      <div class="col-6">
+      </div>
+      <div class="new-ski col-6">
+        <%= simple_form_for @ski do |f| %>
+          <%= f.input :brand , :collection => %w[Atomic Rossignol Lacroix Salomon Fischer Crows Others] %>
+          <%= f.input :experience_level, :collection =>%w[Beginner Intermediate Advanced] %>
+          <%= f.input :size %>
+          <%= f.input :daily_price%>
+          <%= f.input :location %>
+          <div class="row center-btn">
+            <%= f.submit "Submit", class: "btn btn-primary" %>
+          </div>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
