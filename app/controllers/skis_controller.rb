@@ -2,6 +2,12 @@ class SkisController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   def index
     @skis = Ski.all
+    @markers = @skis.geocoded.map do |ski|
+      {
+        lat: ski.latitude,
+        lng: ski.longitude
+      }
+    end
   end
 
   def show

@@ -1,4 +1,5 @@
 class Ski < ApplicationRecord
+  
   belongs_to :user
   has_many :bookings, dependent: :destroy
 
@@ -6,6 +7,7 @@ class Ski < ApplicationRecord
   validates :size, numericality: { only_integer: true }
   validates :size,numericality: { in: 50..200 }
   validates :daily_price, numericality: {:greater_than => 0}
-
-
+  
+  geocoded_by :location
+  after_validation :geocode
 end

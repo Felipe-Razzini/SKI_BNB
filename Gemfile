@@ -29,6 +29,7 @@ gem "stimulus-rails"
 gem "geocoder"
 gem "devise"
 
+gem "geocoder"
 
 
 # Use Redis adapter to run Action Cable in production
