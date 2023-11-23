@@ -1,4 +1,9 @@
 class BookingsController < ApplicationController
+
+  def index
+    @bookings = Booking.all
+  end
+
   def new
     @ski = Ski.find(params[:ski_id])
     @booking = Booking.new

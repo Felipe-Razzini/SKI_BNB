@@ -4,18 +4,21 @@
   <%= simple_form_for [@ski, @booking] do |f| %>
     <div class="form-inputs w-50 d-flex">
       <div class="pe-3">
-        <%= f.input :start_date.to_s,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :start_date.to_s,as: :string,
+          input_html: { data: { controller: "datepicker" } } %>
       </div>
       <div>
-        <%= f.input :end_date.to_s,
-            as: :string,
-            input_html: { data: { controller: "datepicker" } } %>
+        <%= f.input :end_date.to_s, as: :string,
+          input_html: { data: { controller: "datepicker" } } %>
       </div>
-    </div>
-    <div>
-      <p>Total Price: <%=  %></p>
+      <div>
+        <%= f.input :daily_price, as: :hidden,
+          input_html: { value: @ski.daily_price } %>
+      </div>
+      <div>
+        <%= f.input :total_price, as: :hidden,
+          input_html: { value: @booking.total_price } %>
+      </div>
     </div>
     <div class="form-actions">
       <%= f.submit "Reserve", class: "btn btn-dark" %>
