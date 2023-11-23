@@ -1,3 +1,14 @@
-<div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://courchevel.vip/wp-content/uploads/2020/06/skiing_courchevel.jpg)">
-  <h2>Hi</h2>
-</div>
+
+
+<% @bookings.each do |booking| %>
+<%= booking %>
+  <div class="container">
+    <div class="card-category w-50" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://courchevel.vip/wp-content/uploads/2020/06/skiing_courchevel.jpg)">
+      <h3><strong><%= booking.ski.location %></strong></h3>
+    </div>
+    <div class="card-product-infos card-vacation w-50">
+      <h5><strong>From * to *</strong></h5>
+      <p>Product description with <strong>relevant info</strong> only.</p>
+    </div>
+  </div>
+<% end %>
