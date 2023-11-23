@@ -19,6 +19,8 @@ Rails.application.routes.draw do
   # post "skis", to:"skis#create"
 
   resources :skis, only: %i[index show new create] do
-    resources :bookings, only: %i[index new create]
+    resources :bookings, only: %i[new create]
   end
+
+  resources :bookings, only: %i[index]
 end
