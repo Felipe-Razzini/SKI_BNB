@@ -1,5 +1,5 @@
 <div class="new-form">
-  <div class="container">
+  <div class="container ">
     <div class="row pt-5">
       <div class="col-6">
       </div>
@@ -7,7 +7,7 @@
         <%= simple_form_for @ski do |f| %>
           <%= f.input :brand , :collection => %w[Atomic Rossignol Lacroix Salomon Fischer Crows Others] %>
           <%= f.input :experience_level, :collection =>%w[Beginner Intermediate Advanced] %>
-          <%= f.input :size %>
+          <%= f.input :size,as: :numeric %>
           <%= f.input :daily_price%>
           <%= f.input :location %>
           <div class="row center-btn">
