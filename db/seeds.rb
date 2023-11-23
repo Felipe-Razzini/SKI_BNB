@@ -13,7 +13,7 @@ user3 = User.create!(email: 'test@test1.com', password: '12ss23')
 #   puts "Created #{user.email}"
 # end
 
-atomic = { brand: 'Atomic', experience_level: 'Beginner', size: 169, daily_price: 40, location: "Zermatt, Switzerland", user_id: user1.id }
+atomic = { brand: 'Atomic', experience_level: 'Beginner', size: 169, daily_price: 40, location: "Zermatt, Switzerland", user_id: user1.id}
 rossignol = { brand: 'Rossignol', experience_level: 'Beginner', size: 181, daily_price: 50, location: "Lech, Austria", user_id: user2.id}
 lacroix = { brand: 'Lacroix', experience_level: 'Advanced', size: 198, daily_price: 80, location: "Alpes D'huez, France", user_id: user3.id}
 salomon = { brand: 'Salomon', experience_level: 'Intermediate', size: 162, daily_price: 70, location: "Corvara, Italia", user_id: user1.id}
