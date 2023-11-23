@@ -28,6 +28,7 @@ gem "stimulus-rails"
 
 gem "geocoder"
 gem "devise"
+gem "dotenv-rails"
 
 gem "geocoder"
 
