@@ -13,6 +13,7 @@ class BookingsController < ApplicationController
     @ski = Ski.find(params[:ski_id])
     @booking = Booking.new(booking_params)
     @booking.ski = @ski
+    @booking.user = current_user
     if @booking.save
       redirect_to ski_path(@ski), notice: 'Booking was successfully created.'
     else

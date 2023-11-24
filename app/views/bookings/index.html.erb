@@ -1,14 +1,14 @@
 
 
 <% @bookings.each do |booking| %>
-<%= booking %>
   <div class="container">
     <div class="card-category w-50" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(https://courchevel.vip/wp-content/uploads/2020/06/skiing_courchevel.jpg)">
       <h3><strong><%= booking.ski.location %></strong></h3>
     </div>
     <div class="card-product-infos card-vacation w-50">
-      <h5><strong>From * to *</strong></h5>
-      <p>Product description with <strong>relevant info</strong> only.</p>
+      <p><strong>From <%= booking.start_date.strftime('%d-%m-%Y') %> to <%= booking.end_date.strftime('%d-%m-%Y') %></strong></p>
+      <p><%= booking.total_price %>€</p>
+      <p><%= booking.ski.brand %> skis</p>
     </div>
   </div>
 <% end %>
