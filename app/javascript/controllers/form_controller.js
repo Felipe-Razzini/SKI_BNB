@@ -33,7 +33,7 @@ export default class extends Controller {
     let days = (eDate - sDate) / (1000*60*60*24);
     let price = days * this.priceValue
     console.log(price)
-    this.priceTextTarget.innerText = `${price}€`
+    this.priceTextTarget.innerText = `Total: ${price}€`
     this.totalTarget.value = price
   }
 
