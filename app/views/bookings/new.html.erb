@@ -17,7 +17,7 @@
       </div>
       <div>
         <%= f.input :total_price, as: :hidden,
-          input_html: { value: @booking.total_price } %>
+          input_html: { data: { form_target: "total"} } %>
       </div>
     </div>
     <div class="form-actions">

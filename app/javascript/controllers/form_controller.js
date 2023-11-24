@@ -2,7 +2,7 @@ import { Controller } from "@hotwired/stimulus"
 
 // Connects to data-controller="form"
 export default class extends Controller {
-  static targets = ['priceText']
+  static targets = ['priceText', 'total']
   static values = {
     price: Number
   }
@@ -34,6 +34,7 @@ export default class extends Controller {
     let price = days * this.priceValue
     console.log(price)
     this.priceTextTarget.innerText = `${price}€`
+    this.totalTarget.value = price
   }
 
 }
