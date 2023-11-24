@@ -11,32 +11,41 @@
   </div>
   <div class="container my-4">
     <%# Cards %>
-    <h2>Over 1,000 skis</h1>
-    <div class="row">
-      <% @skis.each do |ski| %>
-        <div class="col-4">
-          <div class="card bg-light text-dark ski-card">
-            <%# <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5_01BcxNccbOeI0TTkO2jEueYlSqLXIn6w&usqp=CAU" alt="Card image cap"> %>
-            <div class="card-image"
-          style="background-image: url('<%= cl_image_path ski.photo.key%>');background-size:cover">
+    <h2>Over 1,000 skis</h2>
+
+    <div class="row mt-3">
+      <div class="col-8">
+        <div class="row">
+          <% @skis.each do |ski| %>
+            <div class="col-4 mb-3">
+              <div class="card bg-light text-dark ski-card">
+                <%# <img class="card-img-top" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSr5_01BcxNccbOeI0TTkO2jEueYlSqLXIn6w&usqp=CAU" alt="Card image cap"> %>
+                <div class="card-image"
+              style="background-image: url('<%= cl_image_path ski.photo.key%>');background-size:cover">
+                </div>
+                <div class="card-body">
+                  <h5 class="card-title"><strong><%= ski.brand %></strong></h5>
+                  <p class="card-text"><%= ski.location %></p>
+                  <p class="card-text"><%= ski.size %> cm</p>
+                  <p class="card-text"><%= ski.experience_level %></p>
+                  <p class="card-text"><%= ski.daily_price %> €</p>
+                </div>
+                <%= link_to "Check availability", ski_path(ski.id), class: "book-button form-control" %>
+              </div>
             </div>
-            <div class="card-body">
-              <h5 class="card-title"><strong><%= ski.brand %></strong></h5>
-              <p class="card-text"><%= ski.location %></p>
-              <p class="card-text"><%= ski.size %> cm</p>
-              <p class="card-text"><%= ski.experience_level %></p>
-              <p class="card-text"><%= ski.daily_price %> €</p>
-            </div>
-            <%= link_to "Check availability", ski_path(ski.id), class: "book-button form-control" %>
-          </div>
+          <% end %>
         </div>
-      <% end %>
-    </div>
-    <%# Maps %>
-    <div style="width: 100%; height: 300px;"
-    data-controller="map"
-    data-map-markers-value="<%= @markers.to_json %>"
-    data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+      </div>
+
+
+      <%# Maps %>
+      <div class="col-4">
+        <div class="sticky-top" style="width: auto; height: 100vh; z-index: 0"
+          data-controller="map"
+          data-map-markers-value="<%= @markers.to_json %>"
+          data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
+        </div>
+      </div>
     </div>
   </div>
 </div>
