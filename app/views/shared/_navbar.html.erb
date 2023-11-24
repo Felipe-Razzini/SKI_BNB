@@ -30,7 +30,8 @@
      <ul class="navbar-nav me-auto">
      <% if user_signed_in? %>
         <li class="nav-item active">
-          <%= link_to "Advertise your gear", new_ski_path, class: "nav-link" %>
+          <button class="add-btn"><%= link_to "Advertise your gear", new_ski_path, class: "nav-link" %></button>
+
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">
