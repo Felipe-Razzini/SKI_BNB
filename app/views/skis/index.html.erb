@@ -6,7 +6,7 @@
               class: "form-control",
               placeholder: "Type a keyword"
           %>
-      <%= submit_tag "Search", brand: "", class: "btn btn-dark" %>
+      <%= submit_tag "Search", brand: "", class: "btn btn-dark button-search" %>
     <% end %>
   </div>
   <div class="container my-4">
@@ -40,7 +40,7 @@
 
       <%# Maps %>
       <div class="col-4">
-        <div class="map" style="width: auto; height: 100vh; z-index: 0"
+        <div class="map position-sticky fixed-top" style="width: auto; height: 100vh; z-index: 0"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
