@@ -1,5 +1,5 @@
 .new-form {
- 
+
   background-size: cover;
   background-image: linear-gradient(
       to top,
@@ -26,7 +26,14 @@
 }
 
 .new-btn{
+  font-weight: bolder;
   border-radius: 10px;
   background-color: black;
   border-color: black;
+}
+.new-btn:hover{
+  color: black;
+  background-color: white;
+  border-color: white;
+  box-shadow: 1px 2px 3px #0000009c;
 }
