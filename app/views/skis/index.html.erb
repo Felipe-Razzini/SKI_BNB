@@ -40,7 +40,7 @@
 
       <%# Maps %>
       <div class="col-4">
-        <div class="sticky-top" style="width: auto; height: 100vh; z-index: 0"
+        <div class="map" style="width: auto; height: 100vh; z-index: 0"
           data-controller="map"
           data-map-markers-value="<%= @markers.to_json %>"
           data-map-api-key-value="<%= ENV['MAPBOX_API_KEY'] %>">
