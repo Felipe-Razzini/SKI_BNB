@@ -1,5 +1,5 @@
-<div class="container m-4" data-controller="form" data-form-price-value="<%= @ski.daily_price %>">
-  <h3 class='mb-5'>New Booking</h3>
+<div class="container m-4 new-booking" data-controller="form" data-form-price-value="<%= @ski.daily_price %>">
+  <h3 class='mb-5'>Book your skis</h3>
 
   <%= simple_form_for [@ski, @booking] do |f| %>
     <div class="form-inputs w-50 d-flex">
@@ -21,7 +21,8 @@
       </div>
     </div>
     <div class="form-actions">
-    <p data-form-target="priceText"></p>
+      <p data-form-target="priceDaily"></p>
+      <p data-form-target="priceText"></p>
       <%= f.submit "Reserve", class: "btn btn-dark" %>
     </div>
   <% end %>
