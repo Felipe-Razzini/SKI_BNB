@@ -1,9 +1,14 @@
 
 .home-header{
+  font-size: 60px;
   color: white !important;
   font-style: oblique;
   text-shadow: -2px 0px 3px black !important;
   position: absolute;
   bottom: 64%;
   left: 10%;
+
+  p {
+    margin-bottom: 0;
+  }
 }
