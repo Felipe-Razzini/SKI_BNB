@@ -9,7 +9,14 @@
   z-index: 1;
   background-color: rgb(238, 238, 238);
 }
+.add-btn{
+  border-radius: 20px;
+  border-color: transparent ;
+}
 
+.add-btn:hover{
+  background-color: #bebdbd4e;
+}
 .navbar-brand {
   width: 200px;
   display: flex;
